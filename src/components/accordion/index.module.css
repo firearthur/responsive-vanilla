@@ -1,0 +1,25 @@
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.title-head {
+  font-weight: bold;
+}
+
+.content-container {
+  max-height: 0;
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+}
+
+.accordion-border {
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+}
