@@ -1,0 +1,24 @@
+.tab {
+  text-transform: uppercase;
+  border: 1px solid black;
+  border-right: none;
+  cursor: pointer;
+  color: black;
+  background: white;
+  transition: all 0.5s ease;
+  flex-basis: 33.33%;
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem;
+  box-sizing: border-box;
+  /* flex-grow: 1; */
+}
+
+.border-right {
+  border-right: 1px solid black;
+}
+
+.active-tab {
+  color: white;
+  background: black;
+}

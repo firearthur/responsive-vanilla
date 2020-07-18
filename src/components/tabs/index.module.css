@@ -2,6 +2,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  flex-basis: 33.33%;
-  /* flex-grow: 1; */
+  width: 100%;
+}
+
+.headers-container {
+  width: 60%;
+  display: flex;
 }

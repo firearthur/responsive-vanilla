@@ -2,6 +2,7 @@ import Accordion from './components/accordion';
 import ContentText from './components/content-text';
 import PercentMaterials from './components/percent-materials';
 import MaterialsContent from './components/materials-content';
+import Tabs from './components/tabs';
 
 import './global.css';
 
@@ -12,12 +13,16 @@ const main = () => {
     { material: 'modal', percent: 4 }
   ];
 
-  const fitGuideContentText = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam tenetur earum repellat distinctio nobis voluptate unde fuga, impedit harum fugiat officia esse! Perspiciatis rerum minima totam unde dolorum, adipisci incidunt?';
+
+
+  // const fitGuideContentText = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam tenetur earum repellat distinctio nobis voluptate unde fuga, impedit harum fugiat officia esse! Perspiciatis rerum minima totam unde dolorum, adipisci incidunt?';
+  const fitGuideContentText = 'fit stuff';
   const fitGuideTitle = 'fit guide';
   const fitGuideContent = new ContentText(fitGuideContentText);
   const fitGuideAccordion = new Accordion(fitGuideTitle, fitGuideContent.node, true);
 
-  const careContentText = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam tenetur earum repellat distinctio nobis voluptate unde fuga, impedit harum fugiat officia esse! Perspiciatis rerum minima totam unde dolorum, adipisci incidunt?';
+  // const careContentText = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam tenetur earum repellat distinctio nobis voluptate unde fuga, impedit harum fugiat officia esse! Perspiciatis rerum minima totam unde dolorum, adipisci incidunt?';
+  const careContentText = 'care stuff';
   const careTitle = 'care';
   const careContent = new ContentText(careContentText);
   const careAccordion = new Accordion(careTitle, careContent.node, true);
@@ -33,6 +38,15 @@ const main = () => {
   document.querySelector('.mobile').appendChild(fitGuideAccordion.node);
   document.querySelector('.mobile').appendChild(careAccordion.node);
   document.querySelector('.mobile').appendChild(materialsAccordion.node);
+
+  const tabsData = {
+    fitGuide: ['fit guide', fitGuideContent.node],
+    care: ['care', careContent.node],
+    materials: ['materials', materialsContent.node]
+  };
+
+  const tabs = new Tabs(tabsData);
+  document.querySelector('.desktop-tablet').appendChild(tabs.node);
 };
 
 window.onload = main;

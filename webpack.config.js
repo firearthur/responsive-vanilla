@@ -28,7 +28,7 @@ module.exports = {
             options: {
               localsConvention: 'camelCaseOnly',
               modules: {
-                localIdentName: '[path]--[hash:base64:8]',
+                localIdentName: '[path]__[local]--[hash:base64:8]',
                 mode: (resourcePath) => {
                   if (/pure.css$/i.test(resourcePath)) {
                     return 'pure';
