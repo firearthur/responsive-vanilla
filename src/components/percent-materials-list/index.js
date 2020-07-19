@@ -1,9 +1,10 @@
 import PercentMaterial from '../percent-material';
 import { contentContainer, mobile } from './index.module.css';
-
+/**
+ * Percent materials list
+ */
 class PercentMaterials {
   /**
-   * Holds the materials and their percentages in a column layout
    * @param {String} materialsData looks like this [
       { material: 'cashmere', percent: 50 },
       { material: 'wool', percent: 46 },
@@ -19,11 +20,13 @@ class PercentMaterials {
       ({ material, percent }) => new PercentMaterial(material, percent, isMobile)
     );
 
-    const container = document.createElement('div');
+    const container = document.createElement('ul');
     container.classList.add(contentContainer);
+
     if (isMobile) {
       container.classList.add(mobile);
     }
+
     percentMaterials.forEach(({ node }) => container.appendChild(node));
 
     this.node = container;

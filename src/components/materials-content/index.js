@@ -1,13 +1,12 @@
 import { contentContainer, hr, mobile } from './index.module.css';
 
+/**
+ * Holds the percentage materials, a ruler, and the textual content
+ */
 class MaterialsContent {
   /**
-   * Holds the materials and their percentages in a column layout
-   * @param {String} materialsData looks like this [
-      { material: 'cashmere', percent: 50 },
-      { material: 'wool', percent: 46 },
-      { material: 'modal', percent: 4 }
-    ]
+   * @param {Node} percentMaterialsNode
+   * @param {Node} materialsTextContentNode
    */
   constructor(percentMaterialsNode, materialsTextContentNode, isMobile) {
     if (!percentMaterialsNode || !materialsTextContentNode) {
@@ -16,8 +15,10 @@ class MaterialsContent {
 
     const container = document.createElement('div');
     container.classList.add(contentContainer);
+
     const ruler = document.createElement('hr');
     ruler.classList.add(hr);
+
     if (isMobile) {
       ruler.classList.add(mobile);
     }

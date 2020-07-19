@@ -1,8 +1,9 @@
 import { paragraph, mobile } from './index.module.css';
-
+/**
+ * Simple paragraph component
+ */
 class ContentText {
   /**
-   * Simple paragraph component
    * @param {String} text textual content
    */
   constructor(text, isMobile) {

@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(logger('dev'));
 app.use(cors({
   allowedHeaders: 'Content-Type, authorization',
-  methods: ['GET, POST, PUT, DELETE', 'OPTIONS'],
+  methods: ['GET, POST, PUT, DELETE', 'OPTIONS']
 }));
 
 /**
@@ -23,7 +23,6 @@ app.use(cors({
  * at dis/index.html
  * in production, server would serve static at port 3333 no client server
  */
-
 
 app.get('/api/hello', (req, res) => {
   console.log('I was hit'.blue);
@@ -35,7 +34,6 @@ app.use(express.static(path.join(__dirname, '/dist/')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/dist/', 'index.html'));
 });
-
 
 app.listen(PORT, () => {
   console.log(`Listening on: http://localhost:${PORT.blue}`.green);

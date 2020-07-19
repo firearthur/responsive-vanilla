@@ -6,11 +6,11 @@
 }
 
 .headers-container {
-  width: 50.7%;
+  width: 60%;
   display: flex;
 }
 
 .tabs-container {
-  padding-top: 4rem;
+  width: 100%;
   padding-top: 3.2rem;
 }

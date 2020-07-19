@@ -64,8 +64,7 @@ html {
 @media only screen and (min-width: 768px) {
   .desktop-tablet {
     display: block;
-    width: 80%;
-    margin: auto;
+    width: 100%;
     padding-top: 4.6rem;
   }
 }
