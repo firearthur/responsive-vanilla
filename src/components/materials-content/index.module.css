@@ -6,5 +6,12 @@
 }
 
 .hr {
-  width: 50px;
+  width: 42px;
+  position: relative;
+  left: -0.4rem;
+}
+
+.mobile {
+  position: static;
+  left: 0;
 }

@@ -44,6 +44,10 @@ table {
 	border-spacing: 0;
 }
 
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 /* styles */
 
 html {
@@ -62,7 +66,7 @@ html {
     display: block;
     width: 80%;
     margin: auto;
-    padding-top: 4rem;
+    padding-top: 4.6rem;
   }
 }
 

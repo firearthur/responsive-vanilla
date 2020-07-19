@@ -1,5 +1,5 @@
 import PercentMaterial from '../percent-material';
-import { contentContainer } from './index.module.css';
+import { contentContainer, mobile } from './index.module.css';
 
 class PercentMaterials {
   /**
@@ -10,17 +10,20 @@ class PercentMaterials {
       { material: 'modal', percent: 4 }
     ]
    */
-  constructor(materialsData) {
+  constructor(materialsData, isMobile) {
     if (!Array.isArray(materialsData)) {
       console.warn('Invalid args passed to PercentMaterials constructor!', materialsData);
     }
 
     const percentMaterials = materialsData.map(
-      ({ material, percent }) => new PercentMaterial(material, percent)
+      ({ material, percent }) => new PercentMaterial(material, percent, isMobile)
     );
 
     const container = document.createElement('div');
     container.classList.add(contentContainer);
+    if (isMobile) {
+      container.classList.add(mobile);
+    }
     percentMaterials.forEach(({ node }) => container.appendChild(node));
 
     this.node = container;

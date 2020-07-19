@@ -1,6 +1,13 @@
 .content-container {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
+  /* justify-content: space-evenly; */
+  /* width: 100%; */
+  width: 46%;
+  margin-bottom: 1.1rem;
+}
+
+.mobile {
+  width: 90%;
+  margin-bottom: 0.6rem;
 }

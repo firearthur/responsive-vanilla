@@ -1,4 +1,4 @@
-import { contentContainer, hr } from './index.module.css';
+import { contentContainer, hr, mobile } from './index.module.css';
 
 class MaterialsContent {
   /**
@@ -9,7 +9,7 @@ class MaterialsContent {
       { material: 'modal', percent: 4 }
     ]
    */
-  constructor(percentMaterialsNode, materialsTextContentNode) {
+  constructor(percentMaterialsNode, materialsTextContentNode, isMobile) {
     if (!percentMaterialsNode || !materialsTextContentNode) {
       console.warn('Invalid args passed to MaterialsContent constructor!', percentMaterialsNode, materialsTextContentNode);
     }
@@ -18,6 +18,9 @@ class MaterialsContent {
     container.classList.add(contentContainer);
     const ruler = document.createElement('hr');
     ruler.classList.add(hr);
+    if (isMobile) {
+      ruler.classList.add(mobile);
+    }
     container.appendChild(percentMaterialsNode);
     container.appendChild(ruler);
     container.appendChild(materialsTextContentNode);
