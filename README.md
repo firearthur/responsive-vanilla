@@ -1,6 +1,9 @@
 # What is this?
 Simple responsive app I wrote with `HTML`, `CSS`, and vanilla `JavaScript`.
-No front-end helper libraries was used.
+No front-end helper libraries were used.
+
+## Note:
+I went for very minimal styles to put emphasis on the code and functionality.
 
 # Usage:
 1. Unzip or clone the app.
